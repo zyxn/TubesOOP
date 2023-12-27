@@ -139,7 +139,8 @@ public class Login extends javax.swing.JDialog {
             dispose();
             getParent().setVisible(false);
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Email or password is incorrect", "Authentication Failed", JOptionPane.WARNING_MESSAGE);
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Username or password is incorrect", "Authentication Failed", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnSelanjutnyaActionPerformed
 

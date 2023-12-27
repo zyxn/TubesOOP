@@ -24,8 +24,12 @@ public class Profile {
     public Profile(String nama, String Password) throws SQLException {
         this.kirim = new ArrayList<>();
         this.user = new Pelanggan(nama, Password);
-        this.allResi = new PelangganResi(nama);
-        addPengiriman();
+        try {
+            this.allResi = new PelangganResi(nama);
+            addPengiriman();
+        } catch (Exception e) {
+            this.kirim = null;
+        }
     }
 
     private void addPengiriman() throws SQLException {
@@ -42,6 +46,12 @@ public class Profile {
 
     public Pelanggan getUser() {
         return user;
+    }
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) throws SQLException {
+        Profile p = new Profile("Username", "katasabndi");
+        System.out.println(p.getUser());;
     }
 
 }

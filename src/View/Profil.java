@@ -29,7 +29,10 @@ public class Profil extends javax.swing.JFrame {
         labelUsername.setText(user.getUser().getUsername());
         labelTelp.setText("0" + user.getUser().getTelepon());
         labelAlamat.setText(user.getUser().getAlamat());
-        populateTable();
+        try {
+            populateTable();
+        } catch (Exception e) {
+        }
         tableResi.setDefaultEditor(Object.class, null);
 
     }

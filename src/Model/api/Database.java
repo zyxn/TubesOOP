@@ -20,7 +20,7 @@ public class Database {
 
     final String DB_URL = "jdbc:mysql://localhost/tubes";
     final String DB_USER = "root";
-    final String DB_PASS = "Pass";
+    final String DB_PASS = "PASS";
     Connection conn;
     Statement stmt;
     ResultSet rs;
